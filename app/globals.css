@@ -122,3 +122,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes scroll-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 10s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 10s linear infinite;
+}

@@ -64,14 +64,14 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
-                <a
+                <Link
                   key={index}
                   href={social.href}
                   aria-label={social.label}
                   className=" hover:text-white transition-colors"
                 >
                   <social.icon className="h-5 w-5" />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -81,9 +81,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.about.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-sm transition-colors">
+                  <Link href={link.href} className="text-sm transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -94,9 +94,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.categories.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-sm transition-colors">
+                  <Link href={link.href} className="text-sm transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -107,9 +107,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className=" text-sm transition-colors">
+                  <Link href={link.href} className=" text-sm transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -120,9 +120,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.solutions.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-sm transition-colors">
+                  <Link href={link.href} className="text-sm transition-colors">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -134,18 +134,18 @@ export default function Footer() {
             © {new Date().getFullYear()} JobConnect. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-            <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+            </Link>
+            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+            </Link>
+            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
               Cookie Settings
-            </a>
-            <a href="#" className="text-sm text-white/60 hover:text-white transition-colors">
+            </Link>
+            <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">
               Sitemap
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function Navbar(){
                     <ul className="grid w-[400px] gap-3 p-4">
                       <li className="row-span-3">
                         <NavigationMenuLink asChild>
-                          <a
+                          <Link
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-portal-green/20 to-portal-green p-6 no-underline outline-none focus:shadow-md"
                             href="/"
                           >
@@ -36,7 +36,7 @@ export default function Navbar(){
                             <p className="text-sm leading-tight text-black/90">
                               Find your dream job from thousands of listings
                             </p>
-                          </a>
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                       <li>

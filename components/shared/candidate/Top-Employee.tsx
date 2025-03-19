@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Star, Check, MapPin, Briefcase } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function TopEmployees() {
   const topEmployers = [
@@ -72,9 +73,9 @@ export default function TopEmployees() {
       <div className="">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <h2 className="text-responsive-lg mb-3 sm:mb-0">Top Employers</h2>
-          <a href="#" className="text-portal-green font-medium hover:underline">
+          <Link href="#" className="text-portal-green font-medium hover:underline">
             View all employers
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function ServicesHighlight() {
   // Stats data
@@ -15,7 +16,7 @@ export default function ServicesHighlight() {
       <div className="flex flex-col md:flex-row">
         {/* Left side - Image */}
         <div className="w-full md:w-2/5 h-60 md:h-auto">
-          <img
+          <Image
             src="/career-services.png"
             alt="Career services"
             className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-t-none"

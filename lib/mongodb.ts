@@ -12,13 +12,11 @@ interface MongooseCache {
   promise: Promise<Connection> | null;
 }
 
-// Ensure TypeScript recognizes global.mongoose
-declare global {
-  var mongoose: MongooseCache | undefined;
-}
+// Use globalThis to avoid ESLint errors
+(globalThis as any).mongoose = (globalThis as any).mongoose || { conn: null, promise: null };
 
 // Use existing cache or initialize a new one
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached: MongooseCache = (globalThis as any).mongoose;
 
 export default async function connectDB(): Promise<Connection> {
   if (cached.conn) {
@@ -30,7 +28,7 @@ export default async function connectDB(): Promise<Connection> {
   }
 
   cached.conn = await cached.promise;
-  global.mongoose = cached;
+  (globalThis as any).mongoose = cached;
   return cached.conn;
 }
 

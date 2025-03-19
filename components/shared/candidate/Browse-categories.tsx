@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export default function BrowseCategories() {
   const categories = [
@@ -43,14 +44,14 @@ export default function BrowseCategories() {
       <div className="responsive-conatiner">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <h2 className="text-responsive-lg mb-3 sm:mb-0">Browse jobs by industry</h2>
-          <a href="#" className="text-portal-green font-medium hover:underline">
+          <Link href="#" className="text-portal-green font-medium hover:underline">
             View all industries
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {categories.map((category) => (
-            <a
+            <Link
               key={category.id}
               href="#"
               className="group relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow h-40 sm:h-48"
@@ -69,7 +70,7 @@ export default function BrowseCategories() {
                 <h3 className="text-white font-semibold">{category.name}</h3>
                 <p className="text-white/80 text-xs sm:text-sm">{category.count}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

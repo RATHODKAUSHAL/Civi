@@ -12,7 +12,7 @@ export default function Testimonials() {
     {
       id: 1,
       quote:
-        "I found my dream job within two weeks of signing up. The platform's AI matching technology connected me with opportunities that perfectly matched my skills and career goals.",
+        "I found my dream job within two weeks of signing up. The platform `&apos;` AI matching technology connected me with opportunities that perfectly matched my skills and career goals.",
       author: "Emma Thompson",
       role: "Software Engineer",
       avatar: "/placeholder.svg?height=60&width=60",
@@ -21,7 +21,7 @@ export default function Testimonials() {
     {
       id: 2,
       quote:
-        "As a hiring manager, JobConnect has revolutionized our recruitment process. We've reduced our time-to-hire by 40% and found exceptional candidates for hard-to-fill positions.",
+        "As a hiring manager, JobConnect has revolutionized our recruitment process. We `&apos;` ve reduced our time-to-hire by 40% and found exceptional candidates for hard-to-fill positions.",
       author: "James Wilson",
       role: "HR Director",
       avatar: "/placeholder.svg?height=60&width=60",

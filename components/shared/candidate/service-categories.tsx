@@ -33,7 +33,7 @@ export default function ServiceCategories() {
       <div className="responsive-container px-10">
         <h2 className="text-responsive-lg text-2xl font-bold mb-3">Looking for a new opportunity?</h2>
         <p className="text-gray-600 text-xl mb-12 max-w-2xl">
-          We've got all the tools you need to find your perfect job and advance your career
+          We&apos;ve got all the tools you need to find your perfect job and advance your career
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

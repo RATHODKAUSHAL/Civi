@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { MapPin, Clock } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export default function PopularServices() {
   const jobs = [
@@ -95,9 +96,9 @@ export default function PopularServices() {
       <div className="responsive-container">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <h2 className="text-responsive-lg mb-3 sm:mb-0">Featured Job Listings</h2>
-          <a href="#" className="text-portal-green font-medium hover:underline">
+          <Link href="#" className="text-portal-green font-medium hover:underline">
             View all jobs
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

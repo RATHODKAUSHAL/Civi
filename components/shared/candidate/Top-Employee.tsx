@@ -9,7 +9,7 @@ export default function TopEmployees() {
     {
       id: 1,
       name: "Google",
-      logo: "/placeholder.svg?height=100&width=100",
+      logo: "/Assets/google.png",
       industry: "Technology",
       location: "Mountain View, CA",
       openPositions: 42,
@@ -21,7 +21,7 @@ export default function TopEmployees() {
     {
       id: 2,
       name: "Microsoft",
-      logo: "/placeholder.svg?height=100&width=100",
+      logo: "/Assets/microsoft.png",
       industry: "Technology",
       location: "Redmond, WA",
       openPositions: 38,
@@ -33,7 +33,7 @@ export default function TopEmployees() {
     {
       id: 3,
       name: "Amazon",
-      logo: "/placeholder.svg?height=100&width=100",
+      logo: "/Assets/Amazon.png",
       industry: "E-commerce",
       location: "Seattle, WA",
       openPositions: 76,
@@ -51,7 +51,7 @@ export default function TopEmployees() {
     {
       id: 4,
       name: "Apple",
-      logo: "/placeholder.svg?height=100&width=100",
+      logo: "/Assets/apple.png",
       industry: "Technology",
       location: "Cupertino, CA",
       openPositions: 29,

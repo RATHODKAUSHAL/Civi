@@ -12,7 +12,7 @@ export default function Testimonials() {
     {
       id: 1,
       quote:
-        "I found my dream job within two weeks of signing up. The platform `&apos;` AI matching technology connected me with opportunities that perfectly matched my skills and career goals.",
+        "I found my dream job within two weeks of signing up. The platform &apos; AI matching technology connected me with opportunities that perfectly matched my skills and career goals.",
       author: "Emma Thompson",
       role: "Software Engineer",
       avatar: "/placeholder.svg?height=60&width=60",
@@ -21,7 +21,7 @@ export default function Testimonials() {
     {
       id: 2,
       quote:
-        "As a hiring manager, JobConnect has revolutionized our recruitment process. We `&apos;` ve reduced our time-to-hire by 40% and found exceptional candidates for hard-to-fill positions.",
+        "As a hiring manager, JobConnect has revolutionized our recruitment process. We &apos; ve reduced our time-to-hire by 40% and found exceptional candidates for hard-to-fill positions.",
       author: "James Wilson",
       role: "HR Director",
       avatar: "/placeholder.svg?height=60&width=60",
@@ -44,10 +44,10 @@ export default function Testimonials() {
   }
 
   return (
-    <div className="bg-blue-100">
+    <div className="bg-white">
     <section className="py-12 mx-20 sm:px-10 lg:px-20 sm:py-16 ">
       <div className="">
-        <h2 className="text-responsive-lg text-center mb-8 sm:mb-12">People Love JobConnect</h2>
+        <h2 className="text-2xl font-semibold text-center mb-8 sm:mb-12">People Love JobConnect</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center">
           {stats.map((stat, index) => (
@@ -59,7 +59,7 @@ export default function Testimonials() {
         </div>
 
         <div className="mt-10 sm:mt-12 relative">
-          <div className="bg-white rounded-lg p-4 sm:p-8 shadow-sm max-w-3xl mx-auto">
+          <div className="bg-gray-50 rounded-lg p-4 sm:p-8 shadow-sm max-w-3xl mx-auto">
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 mx-auto md:mx-0">
                 <Image

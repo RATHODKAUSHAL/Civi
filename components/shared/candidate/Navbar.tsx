@@ -10,7 +10,12 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
   } from "@/components/ui/navigation-menu"
+import { useState } from "react"
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 export default function Navbar(){
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
     return(
         <div className="bg-blue-50 sm:px-10 lg:px-20 h-20 shadow-md flex items-center justify-between">
             <div>
@@ -118,9 +123,55 @@ export default function Navbar(){
                 <Button className="bg-white font-semibold border-2 font-sans border-blue-500 hover:bg-blue-500 text-black hover:text-white cursor-pointer">
                     Employee
                 </Button>
-                <Button className="bg-blue-500 font-semibold border-2 font-sans hover:bg-white text-white hover:border-black hover:text-black cursor-pointer">
+                <Dialog>
+                  <DialogTrigger asChild>
+                  <Button className="bg-blue-500 font-semibold border-2 font-sans hover:bg-white text-white hover:border-black hover:text-black cursor-pointer">
                     Candidate
                 </Button>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-md p-6 rounded-lg shadow-xl">
+                    <DialogHeader>
+                      <DialogTitle>
+                        LogIn With Your Credentials
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="mt-4">
+                        <Label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                          Email
+                        </Label>
+                        <Input
+                          id="email"
+                          type="tel"
+                          placeholder="Enter your Email"
+                          className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          // value={mobile}
+                          // onChange={(e) => setMobile(e.target.value)}
+                          required
+                        />
+                      </div>
+                    <div className="">
+                        <Label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                          Password
+                        </Label>
+                        <Input
+                          id="password"
+                          type="tel"
+                          placeholder="Enter Passwrod"
+                          className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          // value={mobile}
+                          // onChange={(e) => setMobile(e.target.value)}
+                          required
+                        />
+                      </div>
+
+                      <DialogFooter className="mt-6">
+                        <Button type="button" className="w-full rounded-md py-2">
+                          Enter
+                        </Button>
+                      </DialogFooter>
+                  </DialogContent>
+                </Dialog>
             </div>
         </div>
     )

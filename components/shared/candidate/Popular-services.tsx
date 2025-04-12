@@ -7,7 +7,7 @@ export default function PopularServices() {
   const jobs = [
     {
       id: 1,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/google.png",
       title: "Senior UX/UI Designer",
       company: "Google",
       location: "Mountain View, CA (Remote)",
@@ -18,7 +18,7 @@ export default function PopularServices() {
     },
     {
       id: 2,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/microsoft.png",
       title: "Full Stack Developer",
       company: "Microsoft",
       location: "Redmond, WA (Hybrid)",
@@ -28,7 +28,7 @@ export default function PopularServices() {
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/Amazon.png",
       title: "Product Manager",
       company: "Amazon",
       location: "Seattle, WA (On-site)",
@@ -39,9 +39,9 @@ export default function PopularServices() {
     },
     {
       id: 4,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/apple.png",
       title: "Data Scientist",
-      company: "Netflix",
+      company: "Apple",
       location: "Los Gatos, CA (Remote)",
       salary: "$140,000 - $170,000",
       jobType: "Full-time",
@@ -49,9 +49,9 @@ export default function PopularServices() {
     },
     {
       id: 5,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/meta.png",
       title: "Marketing Specialist",
-      company: "Spotify",
+      company: "Meta",
       location: "New York, NY (Hybrid)",
       salary: "$80,000 - $100,000",
       jobType: "Full-time",
@@ -59,9 +59,9 @@ export default function PopularServices() {
     },
     {
       id: 6,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/microsoft.png",
       title: "DevOps Engineer",
-      company: "Salesforce",
+      company: "Microsoft",
       location: "San Francisco, CA (Remote)",
       salary: "$125,000 - $155,000",
       jobType: "Full-time",
@@ -70,9 +70,9 @@ export default function PopularServices() {
     },
     {
       id: 7,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/ibm.png",
       title: "Content Writer",
-      company: "HubSpot",
+      company: "IBM",
       location: "Boston, MA (Remote)",
       salary: "$70,000 - $90,000",
       jobType: "Contract",
@@ -80,9 +80,9 @@ export default function PopularServices() {
     },
     {
       id: 8,
-      image: "/placeholder.svg?height=200&width=300",
+      icon: "/Assets/google.png",
       title: "Frontend Developer",
-      company: "Adobe",
+      company: "Google",
       location: "San Jose, CA (Hybrid)",
       salary: "$100,000 - $130,000",
       jobType: "Full-time",
@@ -95,7 +95,7 @@ export default function PopularServices() {
     <section className="py-12 mx-20 sm:px-10 lg:px-20 sm:py-16 bg-portal-gray-light">
       <div className="responsive-container">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-          <h2 className="text-responsive-lg mb-3 sm:mb-0">Featured Job Listings</h2>
+          <h2 className="text-2xl font-bold mb-3 sm:mb-0">Featured Job Listings</h2>
           <Link href="#" className="text-portal-green font-medium hover:underline">
             View all jobs
           </Link>
@@ -107,22 +107,12 @@ export default function PopularServices() {
               key={job.id}
               className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="relative">
-                <Image
-                  src={job.image || "/placeholder.svg"}
-                  alt={job.company}
-                  width={300}
-                  height={200}
-                  className="w-full h-32 object-cover"
-                />
-                {job.badge && (
-                  <div className={`absolute top-2 right-2 badge-${job.badge.toLowerCase()}`}>{job.badge}</div>
-                )}
-              </div>
-
               <div className="p-4">
                 <h3 className="font-medium text-base mb-1 line-clamp-1">{job.title}</h3>
-                <p className="text-sm text-gray-600 mb-3">{job.company}</p>
+                <div className="flex gap-2 items-center py-2">
+                <Image width={20} height={20} src={job.icon} alt={job.company}/>
+                <p className="text-sm text-gray-600">{job.company}</p>
+                </div>
 
                 <div className="flex items-center mb-2 text-xs text-gray-500">
                   <MapPin className="h-3 w-3 mr-1 flex-shrink-0" />

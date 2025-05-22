@@ -6,8 +6,8 @@ export default function FreelanceHeader() {
   const stats = [
     { number: "2M+", label: "Active Job Listings" },
     { number: "10K+", label: "Companies Hiring" },
-    { number: "15M+", label: "Registered Job Seekers" },
-    { number: "500K+", label: "Jobs Filled Monthly" },
+    { number: "15M+", label: " Job Seekers" },
+    { number: "500K+", label: "Monthly Jobs" },
   ]
   return (
     <div className="bg-gray-100 lg:px-20 w-full">

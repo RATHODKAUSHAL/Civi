@@ -29,8 +29,8 @@ export default function ServiceCategories() {
   ]
 
   return (
-    <section className="py-12 sm:px-10 mx-20 lg:px-20 sm:py-16 bg-white">
-      <div className="responsive-container px-10">
+    <section className="py-12 px-20 lg:px-20 sm:py-16 bg-white">
+      <div className="flex flex-col justify-center items-center">
         <h2 className="text-responsive-lg text-2xl font-bold mb-3">Looking for a new opportunity?</h2>
         <p className="text-gray-600 text-xl mb-12 max-w-2xl">
           We&apos;ve got all the tools you need to find your perfect job and advance your career

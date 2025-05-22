@@ -92,7 +92,7 @@ export default function PopularServices() {
   ]
 
   return (
-    <section className="py-12 mx-20 sm:px-10 lg:px-20 sm:py-16 bg-portal-gray-light">
+    <section className="py-12 px-20 sm:px-10 lg:px-20 sm:py-16 bg-portal-gray-light">
       <div className="responsive-container">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <h2 className="text-2xl font-bold mb-3 sm:mb-0">Featured Job Listings</h2>

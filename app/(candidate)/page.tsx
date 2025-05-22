@@ -22,7 +22,7 @@ export default async function page(){
             <BrowseCategories/>
             <TopEmployees/>
             <Testimonials/>
-            <PricingPlans/>
+            {/* <PricingPlans/> */}
             <Footer/>
         </div>
     )

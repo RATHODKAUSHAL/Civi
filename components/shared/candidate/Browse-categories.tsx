@@ -40,8 +40,8 @@ export default function BrowseCategories() {
   ]
 
   return (
-    <section className="py-12 sm:py-16 mx-20 sm:px-10 lg:px-20 bg-portal-gray-light">
-      <div className="responsive-conatiner">
+    <section className="py-12 sm:py-16 px-20 sm:px-10 lg:px-20 bg-portal-gray-light">
+      <div>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <h2 className="text-responsive-lg mb-3 sm:mb-0">Browse jobs by industry</h2>
           <Link href="#" className="text-portal-green font-medium hover:underline">

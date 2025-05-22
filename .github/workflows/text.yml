@@ -1,0 +1,35 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js CI
+# sets the name of the workflow that will appear in the github actions as "Node.js CI" (continuous integration)
+
+on: #Defines when the workflow should run
+  push: # Triggers when someone pushes code to the main branch
+    branches: [ "main" ]
+  pull_request: # Triggers when a pull request is opened trageting the main branch
+    branches: [ "main" ]
+
+jobs:
+  build: # defines qa job named build -- a job is a steps run on the same runner(virtual machine)
+
+    runs-on: ubuntu-latest # specified that the job should run on the latest version of ubuntu
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps: # This is the list of steps to execute inside each job.
+    - uses: actions/checkout@v4 #Uses the checkout action to clone your repository onto the GitHub runner so the workflow can access the code.
+    - name: Use Node.js ${{ matrix.node-version }} # Use the set-up action to:
+      uses: actions/setup-node@v4 # install the node js version specified in the matrix
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm' # enable npm caching which speeds up installs by reusing previously downloaded packeges.
+    - run: npm ci #Runs npm ci, which:
+                  #Installs project dependencies from the package-lock.json file.
+                  #Ensures clean and reproducible builds.
+    - run: npm run build --if-present #Runs the build script from your package.json, but only if it exists.
+                                      #--if-present avoids errors if there's no build script.
+    # - run: npm test #Runs the project's test suite using the test script defined in package.json.

@@ -11,7 +11,7 @@ export default function FindTalent() {
   ]
 
   return (
-    <section className="py-16 sm:px-10 lg:px-20 mx-20 sm:py-20">
+    <section className="py-16 sm:px-10 lg:px-20 px-20 sm:py-20">
       <div className="">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1">
